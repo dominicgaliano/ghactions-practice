@@ -1,0 +1,20 @@
+name: run-python-tests
+run-name: Run python unit tests by @${{ github.actor }}
+on: [push]
+jobs:
+  run-python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9.13'
+
+      - name: Move to python file directory
+        run: cd ./data_structures/
+
+      - name: Run unittest
+        run: python -m unittest discover data_structures --verbose 

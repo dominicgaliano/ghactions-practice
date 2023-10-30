@@ -8,7 +8,7 @@ _I am also using vim, (specifically neovim,) for the first time during this proj
 
 ## Skills Learned
 
-- Added .learn-gihub-actions.yml as first action from [github actions documentation]("https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions")
+- Added learn-gihub-actions.yml as first action from [github actions documentation]("https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions")
   - This action is triggered by pushes to the repo (including merged pull requests)
   - Has one job, "checks-bat-version" that:
     - runs on the latest version ubuntu runner
@@ -16,3 +16,10 @@ _I am also using vim, (specifically neovim,) for the first time during this proj
     - uses an action to install node 14
     - uses npm to install `bats` software testing package
     - runs command that outputs bats software version
+- Added run-python-tests.yml
+  - This action is triggered by pushes to the repo
+  - Has one job, "run-python-tests" that:
+    - runs on the latest version ubuntu runner
+    - uses v4 of the checkout action to checkout repo files
+    - installs python version 3.9.13
+    - runs all tests within the /data_structures directory
