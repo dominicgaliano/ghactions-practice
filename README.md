@@ -16,6 +16,7 @@ _I am also using vim (specifically neovim), for the first time during this proje
     - uses an action to install node 14
     - uses npm to install `bats` software testing package
     - runs command that outputs bats software version
+
 - Added run-python-tests.yml
   - This action is triggered by pushes to the repo
   - Has one job, "run-python-tests" that:
@@ -23,3 +24,12 @@ _I am also using vim (specifically neovim), for the first time during this proje
     - uses v4 of the checkout action to checkout repo files
     - installs python version 3.9.13
     - runs all tests within the /data_structures directory
+
+- Created a full CI/CD pipeline
+  - Code located in [a separate repository]("https://github.com/dominicgaliano/ec2practice")
+  - Continuous Integration
+    - Express server test cases run on PRs with main
+  - Continuous Deployment
+    - Pushes to main automatically deployed to EC2 instance
+    - EC2 instance daemon's restarted on changes
+
