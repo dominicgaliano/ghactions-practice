@@ -4,7 +4,7 @@
 
 This goal of this project is to practice using github actions to perform CI/CD.
 
-_I am also using vim, (specifically neovim,) for the first time during this project!_
+_I am also using vim (specifically neovim), for the first time during this project!_
 
 ## Skills Learned
 
